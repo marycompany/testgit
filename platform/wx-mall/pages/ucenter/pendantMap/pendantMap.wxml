@@ -1,0 +1,58 @@
+
+ <view class="container">
+    <view class="address-list" wx:if="{{terminalList.length > 0 }}">
+        <view class="item" wx:for="{{terminalList}}" wx:key="{{item.id}}" bindtap="addressAddOrUpdate" data-address-id="{{item.id}}">
+            <view class="l">
+                <view class="name">{{item.wearer + '(' + item.relation +')'}}</view>
+                <!-- <view class="default" wx:if="{{item.is_default}}">默认</view> -->
+            </view>
+            <view class="c">
+                <view class="mobile">{{item.wearerMobile}}</view>
+                <view class="address">{{item.terminalId}}</view>
+            </view>
+            <view class="r">
+                <image catchtap="deleteAddress" data-address-id="{{item.id}}" class="del" src="/static/images/del-address.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="empty-view" wx:if="{{terminalList.length <= 0 }}">
+      <image class="icon" src="http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/noAddress-26d570cefa.png"></image>
+      <text class="text">收货地址在哪里</text>
+    </view>
+    <view class="add-address" bindtap="addressAddOrUpdate" data-address-id="0">新建</view>
+</view>
+
+
+
+<!-- <view class="add-address"  >
+    
+
+        <view class="form-item" >
+       
+        <view class='chuli' url="../goods/goods?id={{item.id}}">
+
+        <view class='b' >
+      <view class="input"  auto-focus>吊坠编号:{{item.id}}</view>
+      </view>
+
+      <view class='a'>
+       <view class="look"  bindtap="getLocation">
+        位置{{address.userName}} </view>
+        </view>
+         </view>
+
+
+            <view class='chuli'>
+        <view class='b'>
+      <view class="input"  auto-focus>吊坠编号:{{address.userName}}</view>
+      </view>
+
+      <view class='a'>
+       <view class="look"  bindtap="getLocation">
+        位置{{address.userName}} </view>
+        </view>
+         </view>
+          </view>
+    
+ 
+</view> -->

@@ -1,0 +1,76 @@
+<view class="add-address">
+    <view class="add-form">
+        <view class="form-item">
+            <input class="input" bindinput="bindinputName" placeholder="姓名" value="{{address.userName}}" auto-focus/>
+        </view>
+        <view class="form-item">
+            <input class="input" bindinput="bindinputMobile" value="{{address.telNumber}}" maxlength="15" type="number" placeholder="手机号码"/>
+        </view>
+
+ 
+        <!-- <view class="form-item">
+        <view class='info'>
+           <view class='city'>{{province+city+district+street}}</view></view>
+     
+        </view> -->
+
+        
+        <view class="form-item">
+            <input class="input" value="{{address.full_region}}" disabled="true" bindtap="chooseRegion" placeholder="{{province+'省'+city+'市'+district}}"/>
+     
+        </view>
+
+
+
+
+
+
+        <view class="form-item">
+            <input class="input" bindinput="bindinputAddress" value="{{address.detailInfo}}" placeholder="{{address}}"/>
+             <!-- <view class='city'>{{street}}</view> -->
+        </view>
+        <view class="form-default">
+            <text bindtap="bindIsDefault" class="default-input {{address.is_default == 1 ? 'selected' : ''}}">设为默认地址</text>
+        </view>
+
+
+
+ <view class="address-list" wx:if="{{ addressList.length > 0 }}">
+        <view class="item" wx:for="{{addressList}}" wx:key="{{item.id}}" bindtap="addressAddOrUpdate" data-address-id="{{item.id}}">
+            <view class="l">
+                <view class="name">{{item.userName}}</view>
+                <view class="default" wx:if="{{item.is_default}}">默认</view>
+            </view>
+            <view class="c">
+                <view class="mobile">{{item.telNumber}}</view>
+                <view class="address">{{item.full_region+item.detailInfo}}</view>
+            </view>
+            <view class="r">
+                <image catchtap="deleteAddress" data-address-id="{{item.id}}" class="del" src="/static/images/del-address.png"></image>
+            </view>
+        </view>
+    </view>
+
+
+    </view>
+
+    <view class="btns">
+        <button class="cannel" bindtap="cancelAddress">取消</button>
+        <button class="save" bindtap="saveAddress">保存</button>
+    </view>
+
+    <view class="region-select" wx:if="{{openSelectRegion}}">
+      <view class="hd">
+        <view class="region-selected">
+          <view class="item {{item.id == 0 ? 'disabled' : ''}} {{(regionType -1) === index ? 'selected' : ''}}" bindtap="selectRegionType" data-region-type-index="{{index}}" wx:for="{{selectRegionList}}" wx:key="{{item.id}}">{{item.name}}</view>
+        </view>
+        <view class="done {{selectRegionDone ? '' : 'disabled'}}" bindtap="doneSelectRegion">确定</view>
+      </view>
+      <scroll-view scroll-y class="bd">
+        <view class="region-list">
+          <view class="item {{item.selected ? 'selected' : ''}}" bindtap="selectRegion" data-region-index="{{index}}" wx:for="{{regionList}}" wx:key="{{item.id}}">{{item.name}}</view>
+        </view>
+      </scroll-view>
+    </view>
+</view>
+<view class="bg-mask" bindtap="cancelSelectRegion" wx:if="{{openSelectRegion}}"></view>

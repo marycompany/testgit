@@ -1,0 +1,150 @@
+<view class="add-address">
+    <view class="add-form">
+      <!-- <view class="form-item">
+            <input class="input" bindinput="bindinputId" placeholder="姓名" value="{{address.id}}" auto-focus/>
+        </view> -->
+        <view class="form-item">
+            <input class="input" bindinput="bindinputName" placeholder="姓名" value="{{address.wearer}}" auto-focus/>
+        </view>
+        <view class="form-item">
+            <input class="input" bindinput="bindinputMobile" value="{{address.wearerMobile}}" maxlength="15" type="number" placeholder="佩戴者手机号码"/>
+        </view>
+  <view class="form-item">
+            <input class="input" bindinput="bindinputterminalId" placeholder="吊坠编号" value="{{address.terminalId}}" auto-focus/>
+        </view>
+        <view class="form-item">
+            <input class="input" bindinput="bindinputrelation" value="{{address.relation}}" maxlength="15" type="number" placeholder="亲属关系"/>
+        </view>
+ 
+        <!-- <view class="form-item">
+        <view class='info'>
+           <view class='city'>{{province+city+district+street}}</view></view>
+     
+        </view> -->
+
+        
+        <!-- <view class="form-item">
+            <input class="input" value="{{address.full_region}}" disabled="true" bindtap="chooseRegion" placeholder="{{province+'省'+city+'市'+district}}"/>
+     
+        </view> -->
+
+
+
+
+
+<!-- 
+        <view class="form-item">
+            <input class="input" bindinput="bindinputAddress" value="{{address.detailInfo}}" placeholder="{{street}}"/>
+         </view>
+        <view class="form-default">
+            <text bindtap="bindIsDefault" class="default-input {{address.is_default == 1 ? 'selected' : ''}}">设为默认地址</text>
+        </view>-->
+    </view> 
+
+    <view class="btns">
+        <button class="cannel" bindtap="cancelAddress">取消</button>
+        <button class="save" bindtap="saveAddress">保存</button>
+    </view>
+
+    <view class="region-select" wx:if="{{openSelectRegion}}">
+      <view class="hd">
+        <view class="region-selected">
+          <view class="item {{item.id == 0 ? 'disabled' : ''}} {{(regionType -1) === index ? 'selected' : ''}}" bindtap="selectRegionType" data-region-type-index="{{index}}" wx:for="{{selectRegionList}}" wx:key="{{item.id}}">{{item.name}}</view>
+        </view>
+        <view class="done {{selectRegionDone ? '' : 'disabled'}}" bindtap="doneSelectRegion">确定</view>
+      </view>
+      <scroll-view scroll-y class="bd">
+        <view class="region-list">
+          <view class="item {{item.selected ? 'selected' : ''}}" bindtap="selectRegion" data-region-index="{{index}}" wx:for="{{regionList}}" wx:key="{{item.id}}">{{item.name}}</view>
+        </view>
+      </scroll-view>
+    </view>
+</view>
+<view class="bg-mask" bindtap="cancelSelectRegion" wx:if="{{openSelectRegion}}"></view>
+
+
+
+
+
+
+<!-- newADD -->
+
+<!-- <view class="address-list " wx:if="{{address.length > 0 }}">
+        <view class="item" wx:for="{{address}}" wx:key="{{address.id}}" bindtap="addressAddOrUpdate" data-address-id="{{address.id}}">
+            <view class="l">
+                <view class="name">{{address.wearer + '(' + address.relation +')'}}</view>
+               
+            </view>
+            <view class="c">
+                <view class="mobile">{{address.wearerMobile}}</view>
+                <view class="address">{{address.terminalId}}</view>
+            </view>
+          
+        </view>
+    </view> -->
+
+    
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+<!-- <view class="add-address">
+    <view class="add-form">
+        <view class="form-item">
+            <input class="input" bindinput="bindinputimei" placeholder="吊坠编号" value="{{terminal.imei}}" auto-focus/>
+        </view>
+        <view class="form-item">
+            <input class="input" bindinput="relatedUser" value="{{terminal.relatedUser}}" maxlength="15" type="number" placeholder="管理员姓名"/>
+        </view>
+  <view class="form-item">
+            <input class="input" bindinput="relateUserMobile" placeholder="管理员电话" value="{{terminal.relateUserMobile}}" auto-focus/>
+        </view>
+          <view class="form-item">
+            <input class="input" bindinput="wearer" placeholder="佩戴者姓名" value="{{terminal.wearer}}" auto-focus/>
+        </view>
+        <view class="form-item">
+            <input class="input" bindinput="wearerMobile" value="{{terminal.wearerMobile}}" maxlength="15" type="number" placeholder="佩戴者电话"/>
+        </view>
+        <view class="form-item">
+            <input class="input" bindinput="relation" placeholder="亲属关系" value="{{terminal.relation}}" auto-focus/>
+        </view>
+        
+   
+    </view>
+
+    <view class="btns">
+        <button class="cannel" bindtap="cancelAddress">取消</button>
+        <button class="save" bindtap="saveAddress">保存</button>
+    </view>
+</view> -->
+    <!-- <view class="region-select" wx:if="{{openSelectRegion}}">
+      <view class="hd">
+        <view class="region-selected">
+          <view class="item {{item.id == 0 ? 'disabled' : ''}} {{(regionType -1) === index ? 'selected' : ''}}" bindtap="selectRegionType" data-region-type-index="{{index}}" wx:for="{{selectRegionList}}" wx:key="{{item.id}}">{{item.name}}</view>
+        </view>
+        <view class="done {{selectRegionDone ? '' : 'disabled'}}" bindtap="doneSelectRegion">确定</view>
+      </view>
+      <scroll-view scroll-y class="bd">
+        <view class="region-list">
+          <view class="item {{item.selected ? 'selected' : ''}}" bindtap="selectRegion" data-region-index="{{index}}" wx:for="{{regionList}}" wx:key="{{item.id}}">{{item.name}}</view>
+        </view>
+      </scroll-view>
+    </view>
+</view>
+<view class="bg-mask" bindtap="cancelSelectRegion" wx:if="{{openSelectRegion}}"></view> -->
+
+
+
+
+
+ 

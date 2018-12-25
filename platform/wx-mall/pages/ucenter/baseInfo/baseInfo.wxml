@@ -1,0 +1,137 @@
+ 
+<view class="container">
+  <form bindreset='reset' bindsubmit='formSubmit'>
+    <view class="row" >
+      <text>吊坠的编码：</text>
+      <input type="text" name="areaName" value="{{pendant_id}}" placeholder='请输入吊坠的编码'></input>
+    </view>
+    <view class="row">
+      <text>管理员姓名：</text>
+      <input type="number" name="priority" value="{{pendant_admin}}" placeholder='请输入管理员姓名'></input>
+    </view>
+     <view class="row" >
+      <text>管理员电话：</text>
+      <input type="text" name="areaName" value="{{pendant_admintel}}" placeholder='请输入管理员电话'></input>
+    </view>
+    <view class="row">
+      <text>佩戴者姓名：</text>
+      <input type="number" name="priority" value="{{pendant_wear}}" placeholder='请输入佩戴者姓名'></input>
+    </view>
+     <view class="row" >
+      <text>佩戴者电话：</text>
+      <input type="text" name="areaName" value="{{pendant_weartel}}" placeholder='请输入佩戴者电话'></input>
+    </view>
+     
+    <view class="submit">
+       <!-- <button type="primary" form-type='reset'>清空</button> -->
+      <button type="primary" form-type='submit' class='button'>提交</button>
+   
+    </view>
+  </form>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 	<!-- <view class="account">
+		<view class="title">吊坠的编码</view>
+		<view class="num"><input bindinput="accountInput" placeholder="输入编码" placeholder-style="color:#999;font-size:12px;" /></view>
+	</view>
+	<view class="hr"></view>
+  
+	<view class="account">
+		<view class="title">管理员姓名</view>
+		<view class="num"><input bindinput=" " placeholder="输入管理员姓名" placeholder-style="color:#999;font-size:12px;" /></view>
+	</view>
+	<view class="hr"></view>
+	<view class="account">
+		<view class="title">管理员电话</view>
+		<view class="num"><input bindinput=" " placeholder="输入管理员电话" placeholder-style="color:#999;font-size:12px;" /></view>
+	</view>
+	<view class="hr"></view>
+	<view class="account">
+		<view class="title">佩戴者姓名</view>
+		<view class="num"><input bindinput=" " placeholder="输入佩戴者姓名" placeholder-style="color:#999;font-size:12px;" /></view>
+	</view>
+	<view class="hr"></view>
+<view class="account">
+		<view class="title">佩戴者电话</view>
+		<view class="num"><input bindinput=" " placeholder="输入佩戴者电话" placeholder-style="color:#999;font-size:12px;" /></view>
+	</view>
+	<view class="hr"></view> -->
+<!-- 
+
+   <view class="line"></view>
+   <view class="item">
+    <view class='name'>
+      <image src="/images/icon/editInfo.jpg" style="width:21px;height:21px;margin-right:10px;"></image>
+    </view>
+    <view class='name'>用户名：</view>
+  </view>
+  <view class="line"></view>
+  
+   <view class="item">
+    <view class='name'>
+      <image src="/images/icon/editInfo.jpg" style="width:21px;height:21px;margin-right:10px;"></image>
+    </view>
+    <view class='name'>电话号码：</view>
+  </view> <view class="line"></view>
+   <view class="item">
+    <view class='name'>
+      <image src="/images/icon/editInfo.jpg" style="width:21px;height:21px;margin-right:10px;"></image>
+    </view><view class='name'>性别：</view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class='name'>
+      <view class="picker">
+        {{array[index]}}
+      </view>
+    </picker>
+  </view>
+  <view class="line"></view>
+   <view class="item">
+    <view class='name'>
+      <image src="/images/icon/editInfo.jpg" style="width:21px;height:21px;margin-right:10px;"></image>
+    </view>
+    <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-12-31" bindchange="bindDateChange"class='name' >
+       出生年份：{{date}}
+    </picker>
+  </view>
+  <view class="line"></view>
+   <view class="item" >
+    <view class='name'>
+      <image src="/images/icon/editInfo.jpg" style="width:21px;height:21px;margin-right:10px;"></image>
+    </view>
+    <view class='name'>吊坠使用人姓名：</view>
+  </view>
+  <view class="line"></view>
+   <view class="item">
+    <view class='name'>
+      <image src="/images/icon/editInfo.jpg" style="width:21px;height:21px;margin-right:10px;"></image>
+    </view>
+    <view class='name'>电话：</view>
+  </view>
+  <view class="line"></view>
+   
+  <view class="line"></view>
+    <view class="item">
+    <view class='name'>
+      <image src="/images/icon/editInfo.jpg" style="width:21px;height:21px;margin-right:10px;"></image>
+    </view>
+    <view class='name'>所在城市 北京</view>
+  </view>
+   
+  <view class="line"></view> -->
+ 

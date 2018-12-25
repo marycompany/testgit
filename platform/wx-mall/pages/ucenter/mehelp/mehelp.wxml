@@ -1,0 +1,61 @@
+
+ <view class="container">
+     <view class="address-list" wx:if="{{terminalList.length > 0 }}">  
+    <view class="address-list"  >
+        <view class="item" wx:for="{{terminalList}}" wx:key="{{item.id}}" bindtap="addressAddOrUpdate" data-address-id="{{item.id}}">  
+        <view class="item"   bindtap="addressAddOrUpdate" data-address-id="{{item.id}}">
+            <view class="l">
+                <view class="name"> {{item.wearer + '(' + item.relation +')'}}</view>
+              
+            </view>
+            <!-- <view class="c">
+                <view class="mobile"> {{item.wearerMobile}}</view>
+                <view class="address">{{province+'省'+city+'市'+district}} </view>
+            </view> -->
+<view class="c">
+            <view wx:if="{{latitude}}" mode="widthFix"> {{latitude}}</view>
+    <view wx:if="{{longitude}}" mode="widthFix"> {{longitude}}</view>
+    <view wx:if="{{address}}" mode="widthFix">{{address}}</view>
+ </view>
+            <!-- <view class="r">
+                <image catchtap="deleteAddress" data-address-id="{{item.id}}" class="del" src="/static/images/del-address.png"></image>
+            </view> -->
+        </view>
+    </view>
+</view></view></view>
+
+<!-- <view class="add-address">
+    
+        <view class="form-item">
+            <view class="input"  auto-focus>求救姓名:{{address.userName}}</view>
+            <view class="input"  auto-focus>求救号码：{{address.userName}}</view>
+            <view class="input"  auto-focus>求救时间：{{address.userName}}</view>
+            <view class="input"  auto-focus>求救地点：{{address.userName}}</view>
+
+           
+      
+        </view>
+        <view class='chuli'>
+     <view class="look2" bindtap="detal">
+      
+<button bindtap='deal' class='deal'> {{btnText}}</button>
+        
+      </view>
+       <view class="look"  bindtap="getLocation">
+      <button class='deal2'> 查看位置{{address.userName}}</button></view>
+        
+         </view> -->
+
+
+
+
+
+
+
+    <!-- <view class="btns">
+        <button class="cannel" bindtap="cancelAddress">取消</button>
+        <button class="save" bindtap="saveAddress">保存</button>
+    </view> -->
+ 
+
+ 

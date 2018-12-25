@@ -1,0 +1,215 @@
+.content{
+  font-family: "Microsoft YaHei";
+}
+.account{
+  background-color: #00B38A;
+  height: 300rpx;
+  text-align: center;
+  color: #ffffff;
+}
+.pic{
+  padding-top:20rpx;text-align: center;
+   
+  
+   
+}
+.items{
+  background-color: #F0F1F5;
+  height: 400px;
+}
+.item{
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;margin: auto; text-align: center;padding:20rpx;
+}
+.hr{
+  width: 100%;
+  height: 15px;
+}
+.img{
+  margin-left: 10px;
+  line-height: 50px;
+}
+.name{
+  /* padding-top:15px;
+  padding-left: 10px;
+  padding-bottom: 15px;
+  font-size: 15px; */
+  flex-direction: column;display: flex;color: red;font-size: 18px;font-weight: bold;
+}
+.text{color: #969494;font-size: 14px; padding-top: 20rpx; }
+.detail{
+  font-size: 12px;
+  position: absolute;
+  right: 10px;
+  height: 20px;
+  line-height: 20px;
+  background-color: #cccccc;
+  width: 60px;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 10px;
+  margin-top:15px;
+}
+.line{
+  border:1px solid #cccccc;
+  opacity: 0.2;
+}
+.open{
+  font-size: 12px;
+  position: absolute;
+  right: 10px;
+  height: 50px;
+  line-height: 50px;
+  color: #969494;
+}.open2{
+  font-size: 15px;
+  position: absolute;
+  right: 10px;
+  height: 50px;
+  line-height: 50px;
+  color: #969494;
+}
+.nav{
+  display: flex;
+  flex-direction: row;
+  padding:10px;
+}
+.nav view{
+  margin:0 auto;
+  text-align: center;
+  font-size: 13px;
+}
+
+
+
+ 
+.diao{
+   padding-top:15px;
+  padding-left: 10px;
+  padding-bottom: 15px;
+  font-size: 14px;color: black;
+}
+.look{   font-size: 14px;
+  position: absolute;
+  right: 10px;
+  height: 30px;
+  line-height: 30px;
+    border-radius: 10%;
+  width: 80px;
+  color: rgb(255, 123, 0);
+  text-align: center;font-weight: bold;
+  border: solid rgb(183, 184, 183) 1px; 
+  margin-top:9px;}
+  .look2{   font-size: 12px;
+  position: absolute;
+  right: 10px;
+  height: 30px;
+  line-height: 30px;
+    border-radius: 10%;
+  width: 80px;
+  color: rgb(255, 123, 0);
+  text-align: center;
+  background-color: rgb(250, 16, 16);
+  
+  margin-top:89px;}
+  .deal{
+      background-color: rgb(250, 16, 16);color: white;font-size: 14px;width: 100%;
+      font-weight: bold;
+  }
+
+
+
+
+
+
+  /* 地图 */
+  /* pages/index/index.wxss */
+page{
+  width:100%;
+  height:100%;
+}
+#map{
+  width:100%;
+  height:100%;
+}
+.lab{
+  background-color:white;
+  height: 120px;
+   
+  width: 90%;
+  margin-left: 5%
+}
+.lab1{
+width: 30%;
+
+}
+
+.table {
+  border: 0px solid darkgray;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 2rem;
+  align-items: center;
+}
+.td {
+    width:40%;
+    justify-content: center;
+    text-align: center;
+    font-size:18px;
+}
+.td1 {
+    width:40%;
+    justify-content: center;
+    text-align: center;
+     font-size:12px;
+}
+.td2{
+  font-size:16px;
+}
+.td3{
+  color: #b21212
+}
+.th {
+  width: 40%;
+  justify-content: center;
+  display: flex;
+  height: 2rem;
+  align-items: center;
+  font-size: smaller;
+}
+.line{
+margin: 0 auto;
+width: 100%;
+height: 2rpx;
+background-color: #D8D8D8;
+}
+.k{
+  width: 30%
+}
+.h{
+  margin-top: 10px;
+}
+.btn{
+   width: 20%;
+  border-radius: 15px;
+  background-color: #15b932;
+  color: white;
+   font-size: 16px;
+}
+.selectcolor{
+color: #15b932
+}
+.selectcolor2{
+color: #e88282
+}
+.img{
+  margin-bottom: -5px;
+}
+.img1{
+  margin-bottom: -5px;
+  filter: grayscale(100%);
+}

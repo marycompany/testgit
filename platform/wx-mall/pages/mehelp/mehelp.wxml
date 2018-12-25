@@ -1,0 +1,53 @@
+<view class="content">
+   
+  <view class="items">
+    <view class="item" bindtap="help">
+       
+      <view class="name" >求救姓名: 
+      <text class='text'>求救时间：</text>
+      <text class='text'>求救地点：</text>
+      <text class='text'>求救次数：</text>
+      
+      <text class='text'>求救号码：</text>
+      </view>
+     <view class="look" bindtap="map">
+        <text bindtap="map">查看位置</text>
+      </view>
+      <view class="look2" bindtap="detal">
+      
+<button  class='deal'> {{btnText}}</button>
+        <!-- <text class='deal'>立即处理</text> -->
+      </view>
+    </view>
+    <view class="line"></view>
+     
+
+
+
+
+
+
+<view class="download" bindtap="toCollect">
+
+<block wx:if="{{isCollect == false}}">
+
+<image src="../../static/images/collect_icon.png"></image>收藏
+
+</block>
+
+<block wx:elif="{{isCollect == true}}" >
+
+ <text style="color:#d81e06">收藏</text>
+
+</block>
+
+</view>
+
+
+
+
+
+
+
+  </view>
+</view>

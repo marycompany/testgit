@@ -1,0 +1,47 @@
+<!--pages/myinfo/myinfo.wxml-->
+<form bindsubmit="formSubmit">
+<view class="weui-cells weui-cells_after-title">
+ 
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">学号</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="id" placeholder="请输入学号" value="{{id}}"/>
+                </view>
+            </view>
+ 
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">姓名</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="wearer" placeholder="请输入姓名" value="{{wearer}}"/>
+                </view>
+            </view>
+            
+            <!-- <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">性别</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="sex" value='{{sex}}'/>
+                </view>
+                <view class="weui-cell__ft">
+                       <switch checked bindchange='switchChange'/>
+                </view>
+            </view> -->
+ 
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">年龄</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="wearerMobile"  placeholder="请输入年龄" value="{{wearerMobile}} "/>
+                </view>
+            </view>
+        </view>
+        <view class="btn-area">
+         <button type='primary' formType="submit">提交</button>
+         </view>
+        </form>
